@@ -40,7 +40,7 @@ function srclist(exts, DIR) {
 
 gulp.task('default', () => runSequence('clean', 'build'));
 
-gulp.task('clean', () => del(DEST));
+gulp.task('clean', () => del([DEST + "**", "!dest", "!" + DEST + ".git**"]));
 
 gulp.task('build', ['scss', 'static']);
 
