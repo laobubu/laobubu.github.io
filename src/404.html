@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found - laobubu</title>
+  <link rel="stylesheet" href="style/lframe.css">
+</head>
+<body>
+<div class="article" id="article">
+  <h1>Page not Found</h1>
+  <p>The page you are looking for is lost. Consider:</p>
+  <ul>
+    <li>Correct the typo in the URL.</li>
+    <li>Update your software.</li>
+    <li>Yell at the fellow who told you this address.</li>
+    <li>Complain to your Internet service provider.</li>
+    <noscript><li>Enable JavaScript and AutoRedirect™ will try to correct the URL.</li></noscript>
+  </ul>
+</div>
+<script>
+var corrects = [
+  {test: /^\/(smartheader|123306|onlineutils)/, host: "lab.laobubu.net"}
+]
+for (var i = 0; i < corrects.length; i++) {
+  var correct = corrects[i];
+  if (correct.test.test(location.pathname)) {
+    var url = location.href.replace(location.host, correct.host);
+    document.getElementById('article').innerHTML = "<h1>Moved</h1><p>The content has been moved to <a href='" + url + "'>" + url + "</a></p><p>Redirecting, wait a moment.</p>";
+    location.href = url;
+  }
+}
+</script>
+</body>
+</html>
