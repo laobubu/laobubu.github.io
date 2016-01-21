@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#455A64">
+  <meta name="msapplication-navbutton-color" content="#455A64">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>捐赠 - laobubu</title>
+  <link rel="stylesheet" href="style/lframe.css">
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <nav role="navigation">
+    <ul class="navbar">
+      <li><a href="./" data-translate>主页</a></li>
+    </ul>
+  </nav>
+  
+  <section role="article" class="article">
+    <h1 data-translate>帮我买杯咖啡</h1>
+    <p>很高兴我的作品能给你带来帮助，也感谢你点击了那个捐赠的链接。</p>
+    <p>正如您所见，我的作品基本都是免费提供的。如果您觉得我的作品很有帮助，不妨帮我买杯“咖啡”，做一点儿微小的工作支持一下我。</p>
+    <p>轻点一下 PayPal 的按钮，或者用支付宝客户端扫描该二维码吧。非常感谢您的支持！</p>
+  
+    <div class="twocol">
+      <div class="twocol-center">
+        <h2>PayPal</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="laobubu@gmail.com">
+          <input type="hidden" name="lc" value="US">
+          <input type="hidden" name="item_name" value="laobubu.net">
+          <input type="hidden" name="no_note" value="0">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - the safest way to pay">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <p>用支付宝？请扫描二维码。</p>
+      </div>
+      <div class="twocol-center">
+        <a href="https://qr.alipay.com/apvqu49h7662kez218"><img src="image/alipay.png" alt="Alipay QR Code"></a>
+      </div>
+    </div>
+  
+    <p id="i18n_selector">
+      Language: 
+      <a href="./donate.html?ncr" hreflang="en">English</a>
+      <a href="./donate.zh-cn.html?ncr" hreflang="zh-cn">简体中文</a>
+    </p>
+  </section>
+</body>
+</html>
