@@ -51,7 +51,20 @@ var _t = (function () {
       break;
     }
   }
-  if (i18n.__url__ && location.pathname != i18n.__url__) {
+  
+  var i18n_selector = document.getElementById('i18n_selector');
+  if (i18n_selector) {
+    for (var i = 0; i < i18n_selector.childNodes.length; i++) {
+      var n = i18n_selector.childNodes[i];
+      if (n.nodeName === "A" && n.hasAttributes("hreflang")) {
+        var lang = n.attributes.getNamedItem("hreflang").value.toLowerCase();
+        i18ns[lang] = i18ns[lang] || {};
+        i18ns[lang].__url__ = n.attributes.getNamedItem("href").value + "?ncr";
+      }
+    }
+  }
+  
+  if (i18n.__url__ && !location.pathname.endsWith(i18n.__url__)) {
     location.href = i18n.__url__ + location.search + location.hash;
     return;
   }

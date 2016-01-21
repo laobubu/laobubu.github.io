@@ -1,0 +1,25 @@
+
+.twocol {
+  display: table;
+  width: 100%;
+  border: none;
+  border-spacing: 25pt;
+  border-collapse: separate;
+  
+  > div {
+    display: table-cell;
+    width: 50%;
+    
+    &.twocol-center {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+
+@include phone {
+  .twocol > div {
+    display: table-row;
+    width: 100%;
+  }
+}
