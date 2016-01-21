@@ -296,7 +296,7 @@ function showLine(firstInit) {
     sentences.splice(sentences_i, 0, sentence);
     sentence = { text: text, fake: true, fun: true };
     sentences_i--;
-    funnyCounter = 0;
+    funnyCounter = -0.5;
   } else {
     funnyCounter = (funnyCounter * 3 + 0.3) / 4;
   }
