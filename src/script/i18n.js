@@ -9,6 +9,7 @@ var i18ns = {
     "blog": "博客",
     "twitter": "微博",
     "showcase": "作品展示",
+    "homepage": "主页",
     "buy me a coffee": "帮我买杯咖啡",
     "nyan": "喵",
     "learn more": "了解详情",

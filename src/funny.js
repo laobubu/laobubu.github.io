@@ -22,6 +22,7 @@ dec("Elvis failed his music class in school.", { "zh-CN": "猫王在学校的音
 dec("A single violin is made of seventy separate pieces of wood.", { "zh-CN": "一个小提琴由70块木头组成" })
 
 dec("Click the white cat and it will dance.", { "zh-CN": "点击那只白猫，它会跳舞" })
+dec("When your cursor hovers here, the text will not change.", { "zh-CN": "鼠标放在这里时，这里的文字不会变" })
 dec("", { "zh-CN": "" })
 
 sentences.push({
