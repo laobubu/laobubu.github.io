@@ -69,7 +69,7 @@ gulp.task('scss', function () {
 });
 
 gulp.task('static', function () {
-  var src = srclist('html, css, js, png, jpg, gif, svg, ico, txt, zip, tar, gz, json, mp3, ogg');
+  var src = srclist('html, css, js, png, jpg, gif, svg, ico, txt, zip, tar, gz, json, mp3, ogg, ico');
   return gulp.src(src)
     .pipe(changed(DEST))
     .pipe(gulp.dest(DEST));
