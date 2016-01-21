@@ -18,6 +18,11 @@ a {
   }
 }
 
+hr {
+  border: none;
+  border-bottom: 1px solid lighten($color: $color-fg, $amount: 30%);
+}
+
 *::selection {
   background-color: $color-darker;
   color: $color-lighter;

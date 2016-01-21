@@ -4,13 +4,14 @@ function ___a(){
 }
 
 var i18n = {};
-var i18ns = {
+var i18ns = i18ns || {
   "zh-cn": {
     "blog": "博客",
     "twitter": "微博",
     "showcase": "作品展示",
     "homepage": "主页",
     "buy me a coffee": "帮我买杯咖啡",
+    "donate": "捐赠",
     "nyan": "喵",
     "learn more": "了解详情",
     "the %1 of %2": "%2的%1",
@@ -22,9 +23,9 @@ var i18ns = {
     "mcu": "单片机",
     "welcome to %1": "欢迎访问 %1",
     "you've been here for %1 sec.": "你已经在这里呆了 %1 秒",
-    "have been working on %1": ___a,
-    'have been working on:': '鼓捣过',
-    'the ... of ...': '头衔与经历',
+    "played with %1": ___a,
+    'played with': '鼓捣过',
+    'some experience': '头衔与经历',
     'show all': '显示全部',
     "there are %1 strings in total and you've read all of them.": "这里总共有 %1 条句子，你已经都看过一次了"
   }
@@ -33,6 +34,15 @@ var _t = (function () {
   var subchoose = navigator.language || navigator.userLanguage || navigator.systemLanguage || "en-US";
   var langs = navigator.languages || [];
   if (!langs.length) langs.push(subchoose);
+  
+  if (/\bncr\b/i.test(location.search)) {
+    return function _t_fake(text) {
+      var str = ""+text;
+      var ar = arguments;
+      str = str.replace(/%(\d+)/g, function(_,i){return ar[i]});
+      return str;
+    }
+  }
   
   for (var i = 0; i < langs.length; i++) {
     var tt = i18ns[langs[i].toLowerCase()];
