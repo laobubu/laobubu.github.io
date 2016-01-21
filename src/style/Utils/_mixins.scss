@@ -1,0 +1,49 @@
+@mixin clear-fix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+$hack_ie7:'+';
+$hack_ie8:'\\9';
+@mixin iehack7($prop, $value) {
+    #{$hack_ie7}#{$prop}: $value;
+}
+@mixin iehack($prop, $value) {
+    #{$prop}: #{$value}#{$hack_ie8};
+}
+
+//一种操蛋的 ul 导航空格解决方案
+@mixin ul-space-fix {
+    font-size: 0;
+    @include iehack(word-spacing,-1px);
+    li {
+        font-size: 12pt;
+        letter-spacing: normal;
+        word-spacing: normal;
+    } 
+}
+
+
+$tablet-width: 700px;
+$desktop-width: 1000px;
+
+@mixin phone {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

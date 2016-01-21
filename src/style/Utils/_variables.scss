@@ -1,0 +1,14 @@
+$font-family: "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", "DejaVu Sans","Ubuntu", Arial, sans-serif, "Segoe UI", EmojiSymbols, Symbola;
+$font-line-height: 1.4;
+$font-size: 12pt;
+$font-size-small: $font-size * 0.9;
+
+$color-bg: #eee;
+$color-fg: #333;
+
+$color-normal: #455A64;
+
+$color-lighter: lighten($color-normal, 60%);
+$color-light: lighten($color-normal, 50%);
+$color-dark: darken($color-normal, 5%);
+$color-darker: darken($color-normal, 10%);

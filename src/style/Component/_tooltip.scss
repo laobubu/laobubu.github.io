@@ -1,0 +1,35 @@
+/**
+
+  <div class="tooltip">
+    <div class="tooltip-text">Nyan</div>
+  </div>
+
+ */
+.tooltip {
+  display: block;
+  position: absolute;
+  padding: 5pt;
+  margin: 5pt;
+  color: $color-lighter;
+  background-color: $color-normal;
+  border-radius: 5pt;
+  font-size: $font-size-small;
+  line-height: 1em;
+  
+  > .tooltip-text {
+    position: relative;
+    display: block;
+    &:before {
+      position: absolute;
+      content: " ";
+      left: 0;
+      top: 100%;
+      margin-top: 4.9pt;
+      width: 0;
+      height: 0;
+      box-sizing: content-box;
+      border: 5pt solid transparent;
+      border-top-color: $color-normal;
+    }
+  }
+}

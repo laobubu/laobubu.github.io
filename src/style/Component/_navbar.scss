@@ -1,0 +1,66 @@
+/**
+  Implement a basic navbar
+  
+  BUGS:
+    If this list item contains plain text only, the text shall be wrapped. You can use <div>
+
+  <ul class="navbar">
+    <li class="align-right"><div><input type="text" placeholder="Search"></div></li>
+    <li class="align-right"><div>Online: 275</div></li>
+    <li><a href="">Hello</a></li>
+    <li><a href="">World</a></li>
+  </ul>
+
+ */
+
+ul.navbar {
+  @include ul-space-fix;
+  @include clear-fix;
+  
+  list-style: none;
+  background-color: $color-dark;
+  
+  margin: 0;
+  padding: 0;
+  
+  > li {
+    color: $color-light;
+    display: inline;
+    font-size: $font-size-small;
+    position: relative;
+    
+    > * {
+      padding: 0 .5em;
+      height: 3em;
+      line-height: 3em;
+      display: inline-block;
+      color: $color-light;
+      text-decoration: none;
+    }
+    input[type=text], input[type=button], input[type=submit] {
+      background-color: $color-normal;
+      border:none;
+      padding: .5em;
+      font-size: $font-size-small;
+      margin: .5em 0;
+      color: $color-light;
+      
+      &:hover, &:focus, &:active, &.active {
+        outline: none;
+        color: $color-darker;
+        background-color: $color-light;
+      }
+    }
+    > a {
+      padding: 0 1.5em;
+      &:hover, &:focus, &:active, &.active {
+        background-color: $color-normal;
+        color: $color-lighter;
+      }
+    }
+    
+    &.align-right {
+      float: right;
+    }
+  }
+}

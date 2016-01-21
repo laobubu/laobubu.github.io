@@ -1,0 +1,24 @@
+//reset
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $font-line-height;
+  
+  margin: 0;
+  
+  background-color: $color-bg;
+  color: $color-fg;
+}
+
+a {
+  color: $color-dark;
+  &:hover, &:active {
+    color: $color-normal;
+  }
+}
+
+*::selection {
+  background-color: $color-darker;
+  color: $color-lighter;
+}
