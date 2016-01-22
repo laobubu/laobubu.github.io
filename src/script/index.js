@@ -3,11 +3,6 @@ var startTime = +new Date();
 var navMain = document.getElementById("nav-main");
 var marquee = document.getElementById("marquee");
 
-var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
-if (iOS) {
-  navMain.style.paddingTop = "20px"; //for gods sake
-}
-
 function WaveShow(canvas, options) {
   var ctx = canvas.getContext("2d");
   var opt = {
