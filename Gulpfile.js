@@ -74,7 +74,8 @@ gulp.task('scss', function () {
 });
 
 gulp.task('static', function () {
-  var src = srclist('html, css, js, png, jpg, gif, svg, ico, txt, zip, tar, gz, json, mp3, ogg, ico');
+  var src = srclist('ts, scss, wav', '!' + SRC);
+  src.unshift(SRC + "**", '!' + SRC + 'style/**');
   return gulp.src(src)
     .pipe(changed(DEST))
     .pipe(gulp.dest(DEST));
