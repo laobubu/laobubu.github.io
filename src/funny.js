@@ -23,6 +23,7 @@ dec("A single violin is made of seventy separate pieces of wood.", { "zh-CN": "�
 
 dec("Click the white cat and it will dance.", { "zh-CN": "点击那只白猫，它会跳舞" })
 dec("When your cursor hovers here, the text will not change.", { "zh-CN": "鼠标放在这里时，这里的文字不会变" })
+dec("This page renders well on IE6 and other legacy browsers", { "zh-CN": "该网站在IE6等中古浏览器下表现良好" })
 dec("", { "zh-CN": "" })
 
 sentences.push({

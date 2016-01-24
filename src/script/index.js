@@ -96,6 +96,7 @@ try {
   var _dance_interval_val = 0;
   var beat = 60000 / 80;
   var music = document.createElement("audio");
+  var danced = false;
   music.innerHTML = '<source src="./static/8bittry.mp3" type="audio/mpeg" /><source src="./static/8bittry.ogg" type="audio/ogg" />';
   music.setAttribute("loop", "true");
   music.loop = true;
@@ -103,11 +104,13 @@ try {
   music.style.position = "absolute";
   music.addEventListener("play", function () {
     music.currentTime = 0;
-    _dance_interval();
     _dance_interval_val && clearInterval(_dance_interval_val);
     _dance_interval_val = setInterval(_dance_interval, beat);
+    cat.className = "cjwJmp";
+    _dance_interval();
   })
   music.addEventListener("pause", function () {
+    cat.className = "";
     _dance_interval_val && clearInterval(_dance_interval_val);
     _dance_interval_val = 0;
   })
@@ -144,6 +147,7 @@ try {
   }
   var nyanTooltip = document.querySelector("#marquee-cjw .tooltip")
   cat.addEventListener("mouseover", function (ev) {
+    (!danced) && (danced = true, cat.className = "");
     nyanTooltip.style.display = "block";
     nyanTooltip.style.left = (cat.offsetLeft + cat.offsetWidth / 3) + 'px';
     nyanTooltip.style.top = (cat.offsetTop - nyanTooltip.offsetHeight - 10) + 'px';
@@ -155,6 +159,13 @@ try {
     nyanTooltip.style.display = "none";
     cat.className ? undance() : dance();
   }, false);
+  
+  setTimeout(function j() {
+    if (!danced) {
+      cat.className = cat.className ? "" : "cjwJmp-once";
+      setTimeout(j, 4000);
+    }
+  }, 2000);
 
   var resized = function () {
     can.width = can.offsetWidth;

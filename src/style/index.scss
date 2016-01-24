@@ -140,6 +140,7 @@
     #marquee-cjw-cat {
       width: 350px;
       max-width: 100%;
+      cursor: pointer;
     }
   }
   
@@ -168,6 +169,10 @@
 .cjwJmp {
   animation:a_cjwJMP 0.75s ease infinite;
 	-webkit-animation:a_cjwJMP 0.75s ease infinite;
+}
+.cjwJmp-once {
+  animation:a_cjwJMP 0.5s ease 2;
+	-webkit-animation:a_cjwJMP 0.5s ease 2;
 }
 @keyframes a_cjwJMP {
 	0%,100%{-webkit-transform:translateY(0);}
