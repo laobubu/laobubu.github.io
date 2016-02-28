@@ -5,7 +5,8 @@ for (var i = 0; i < corrects.length; i++) {
   var correct = corrects[i];
   if (correct.test.test(location.pathname)) {
     var url = location.href.replace(location.host, correct.host);
-    document.getElementById('article').innerHTML = "<h1>Moved</h1><p>The content has been moved to <a href='" + url + "'>" + url + "</a></p><p>Redirecting, wait a moment.</p>";
+    document.title = "Loading..."
+    document.getElementById('article').innerHTML = "<h1>Moved</h1><p>The content has been moved to <a href='" + url + "'>" + url + "</a></p><p>Redirecting, wait a moment.</p><div class='spinner'></div>";
     location.href = url;
   }
 }</script></body></html>
