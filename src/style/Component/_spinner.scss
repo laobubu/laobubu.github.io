@@ -1,0 +1,64 @@
+/**
+  Spinner for loading
+  
+  <p> <span class="spinner"></span> Loading </p>
+  <div class="spinner"></div>
+  
+ */
+
+$spinner-size: 1.2em;
+$spinner-size-big: 160px;
+$spinner-weight: 0.15em;
+$spinner-weight-big: 10px;
+$spinner-duration: 1s;
+
+.spinner {
+  border-radius: 50%;
+}
+
+.spinner {
+  position: relative;
+  display: inline-block;
+  width: $spinner-size;
+  height: $spinner-size;
+  box-sizing: border-box;
+  vertical-align: middle;
+  
+  border-radius: 50%;
+  border: $spinner-weight solid transparent;
+  border-left-color: $color-normal;
+  
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation: spinner-ani $spinner-duration infinite linear;
+  animation: spinner-ani $spinner-duration infinite linear;
+}
+
+div.spinner {
+  display: block;
+  width: $spinner-size-big;
+  height: $spinner-size-big;
+  border-width: $spinner-weight-big;
+  margin: .5em auto;
+}
+
+@-webkit-keyframes spinner-ani {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner-ani {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
