@@ -1,0 +1,25 @@
+
+.tricol {
+  display: table;
+  width: 100%;
+  border: none;
+  border-spacing: 25pt;
+  border-collapse: separate;
+  
+  > div {
+    display: table-cell;
+    width: 30%;
+    
+    &.tricol-center {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+
+@include phone {
+  .tricol > div {
+    display: table-row;
+    width: 100%;
+  }
+}
